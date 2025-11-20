@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tren al Sur – Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <video class="bg" autoplay muted loop playsinline>
+    <source src="/tren_al_sur.mp4" type="video/mp4">
+  </video>
+
+  <main class="wrapper">
+
+
+    <div class="brand">Tren al sur</div>
+    <div class="subtitle">serigrafía y diseño · zona sur · envíos a todo el país</div>
+
+    <div class="links">
+
+     
+      <a class="btn" href="https://trenalsur.empretienda.com.ar" target="_blank">
+        Tienda online
+      </a>
+
+     
+      <a class="btn" href="https://www.instagram.com/trenalsur_____/" target="_blank">
+        Instagram
+      </a>
+
+    </div>
+
+    <div class="footer">MONTE GRANDE</div>
+
+  </main>
+
+
+  <script>
+    const video = document.querySelector('video.bg');
+    const body = document.body;
+
+    function mostrarContenido() {
+      if (!body.classList.contains('ready')) {
+        body.classList.add('ready');
+      }
+    }
+
+    if (video) {
+      video.addEventListener('canplaythrough', mostrarContenido);
+      video.addEventListener('loadeddata', mostrarContenido);
+      setTimeout(mostrarContenido, 4000); // fallback
+    } else {
+      mostrarContenido();
+    }
+  </script>
+
+</body>
+</html>
